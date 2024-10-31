@@ -1,0 +1,10 @@
+services:
+  app-ifood:
+    build: .
+    container_name: app-ifood
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/go/src
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
